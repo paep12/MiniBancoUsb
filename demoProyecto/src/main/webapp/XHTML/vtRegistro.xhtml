@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+
+
+	<h:head>
+		
+	</h:head>		
+	
+	<h:body>
+	
+		<h:form id="formRegistro">
+		<p:messages id="msgGeneral" />
+		<p:growl  id="msgGrowl"/>
+		
+		<p:panel header="Prueba!" id="pnRegistro">
+		
+		
+		<h:panelGrid>
+		Nombre Empresa *
+		<p:inputText id="txtEmpresaNombre"  placeholder="Nombre Empresa" binding="#{vtRegistroVista.txtEmpresaNombre}"></p:inputText>
+		
+		
+		Identificación Empresa *
+		<p:inputText id="txtEmpresaIdentificacion" placeholder="Identificacion" binding="#{vtRegistroVista.txtEmpresaIdentificacion}"></p:inputText>
+		
+		Email *
+		<p:inputText id="txtUsuarioEmail" placeholder="Email" binding="#{vtRegistroVista.txtUsuarioEmail}"></p:inputText>
+		
+		Password *
+		<p:inputText id="txtUsuarioPassword" placeholder="Password"  type="password" binding="#{vtRegistroVista.txtUsuarioPassword}"></p:inputText>
+		
+		Confirmar Password *
+		<p:inputText id="txtUsuarioPasswordCon" placeholder="Password"  type="password" binding="#{vtRegistroVista.txtUsuarioPasswordCon}"></p:inputText>
+		
+		Nombre *
+		<p:inputText id="txtUsuarioNombre"  placeholder="Nombre"  binding="#{vtRegistroVista.txtUsuarioNombre}"></p:inputText>
+		
+		
+		Apellido *
+		<p:inputText id="txtUsuarioApellido"  placeholder="Apellido"  ></p:inputText>
+		
+		</h:panelGrid>
+		
+	  	<p:commandButton id="btnGuardar" value="Guardar" binding="#{vtRegistroVista.btnGuardar}"  action="#{vtRegistroVista.crearAction}" update="msgGeneral,msgGrowl"  />
+		
+	
+		</p:panel>
+			
+		
+		</h:form>
+		
+	
+	</h:body>
+	
+</html>

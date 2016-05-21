@@ -1,0 +1,70 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+
+
+	<h:head>
+		
+	</h:head>		
+	
+	<h:body>
+	
+		<h:form id="formRegistro" style="width:960px; margin:50px auto;"   >
+		<p:messages id="msgGeneral" />
+		<p:growl  id="msgGrowl"/>
+		
+		<p:panel header="Empresas" id="pnRegistro">
+		
+		
+		<h:panelGrid  >
+		Nombre Empresa
+		<p:inputText  id="txtEmpresaNombre"  placeholder="Nombre Empresa" binding="#{vtEmpresaVista.txtEmpresaNombre}"></p:inputText>
+		
+		
+		Identificación Empresa 
+		<p:inputText id="txtEmpresaIdentificacion" placeholder="Identificacion" binding="#{vtEmpresaVista.txtEmpresaIdentificacion}"></p:inputText>
+		
+		</h:panelGrid>
+		
+	  	<p:commandButton id="btnGuardar" value="Guardar" binding="#{vtEmpresaVista.btnGuardar}"  action="#{vtEmpresaVista.crearAction}" update="msgGeneral,msgGrowl,dataTable"  />
+		
+	
+		</p:panel>
+		
+			<p:dataTable id="dataTable" style="width:900px; margin:50px auto;"  value="#{vtEmpresaVista.lasEmpresas}" var="empresa" paginator="true"  paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         rowsPerPageTemplate="5,10,15">
+
+
+			<p:column filterBy="#{empresa.nombre}">
+
+
+				<f:facet name="header">
+					<h:outputText value="Nombre" />
+				</f:facet>
+
+				<h:outputText value="#{empresa.nombre}" />
+
+			</p:column>
+
+
+			<p:column filterBy="#{empresa.identificacion}">
+
+				<f:facet name="header">
+					<h:outputText value="Identificacion" />
+				</f:facet>
+
+				<h:outputText value="#{empresa.identificacion}" />
+			</p:column>
+	
+		</p:dataTable>
+			
+		
+		</h:form>
+		
+	
+	</h:body>
+	
+</html>

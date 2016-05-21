@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+
+
+	<h:head>
+		
+	</h:head>		
+	
+	<h:body>
+	
+		<h:form id="formLogin">
+		<p:messages id="msgGeneral" />
+		<p:growl  id="msgGrowl"/>
+		
+		<p:panel header="Login" id="pnLogin">
+		
+		
+		<h:panelGrid>
+		
+		Login 
+		<p:inputText id="txtUsuarioEmail" placeholder="Correo Electronico" binding="#{vtLoginVista.txtUsuarioEmail}" ></p:inputText>
+		
+		Password 
+		<p:inputText id="txtUsuarioPassword" placeholder="Contraseña"  type="password" binding="#{vtLoginVista.txtUsuarioPassword}"></p:inputText>
+		
+		<a href="vtRegistro.xhtml">Registrate</a>
+		</h:panelGrid>
+		
+	  	<p:commandButton id="btnGuardar" value="Iniciar Sesión" binding="#{vtLoginVista.btnIniciarSesion}" action="#{vtLoginVista.ingresarAction}" update="formLogin"  />
+		
+	
+		</p:panel>
+			
+		
+		</h:form>
+		
+	
+	</h:body>
+	
+</html>

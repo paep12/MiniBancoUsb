@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	</h:head>		
+	
+	<h:body>
+		<h:form id="frmClientes" styleClass="form-signin">
+			<p:growl id="mensaje" />
+			
+				<h:panelGrid columns="1">
+					 <h2 class="form-signin-heading">Crear Proyecto</h2>
+					 
+					 <p:selectOneMenu id="somEmpresas" binding="#{vtProyectoView.somEmpresas}" >
+						<f:selectItem itemValue="-1" itemLabel="Empresas: " />
+						<f:selectItems value="#{vtProyectoView.lasEmpresasItems}" />				
+					</p:selectOneMenu>
+					 
+					 	<p:inputText id="txtNombre" placeholder="Nombre Proyecto" binding="#{vtProyectoView.txtNombre}" styleClass="form-control" />
+					 	
+					
+	
+					 	<p:inputText id="Descripcion" placeholder="Proyecto Descripcion" binding="#{vtProyectoView.txtDescripcion}" style="WIDTH: 300px; HEIGHT: 300px"/>
+					 	
+						 	<p:inputText id="Privacidad" placeholder="Privacidad" binding="#{vtProyectoView.txtPublico}" styleClass="form-control" />
+
+				  <h:panelGrid columns="3" cellpadding="5">
+        <h:outputLabel for="menu" value="Empleados" />
+        <p:selectCheckboxMenu id="menu" value="#{vtProyectoView.selectedCities}" label="Desarrolladores"
+                              filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+            <f:selectItems value="#{vtProyectoView.elUsuarioItems}" />
+        </p:selectCheckboxMenu>
+        <p:commandLink value="Submit" update="display" />
+    </h:panelGrid>
+ 
+    <p:outputPanel id="display" style="width:250px;padding-left:5px;margin-top:10px">
+        <p:dataList value="#{vtProyectoView.selectedCities}" var="city" emptyMessage="No has seleccionado Desarrolladores">
+            #{city}
+        </p:dataList>
+    </p:outputPanel>
+		
+			
+				
+
+				</h:panelGrid>
+				
+				<p:commandButton styleClass="btn btn-lg btn-primary btn-block" id="btnCrear" 	value="Crear Proyecto" title="Crear Proyecto" binding="#{vtProyectoView.btnSave}"			action="#{vtProyectoView.action_create}" update="frmClientes"  />
+				
+	
+		</h:form>
+	</h:body>
+
+</html>	

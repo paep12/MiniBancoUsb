@@ -1,0 +1,193 @@
+<jsp:root jsfc="f:view" xmlns:jsp="http://java.sun.com/JSP/Page"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:c="http://java.sun.com/jstl/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+   
+   <html>
+		<body>
+			<f:view>
+				<ui:composition>
+					<!-- Beging Menu -->
+				
+							<h:form>
+							
+								<p:megaMenu style="width:989px">  
+									<p:submenu label="Master" icon="ui-icon-pencil">  
+							            <p:column>
+							            
+							            	 								            	 <p:submenu label="VtArchivo">  
+								                    <p:menuitem value="Master VtArchivo" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtArchivo.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtArtefacto">  
+								                    <p:menuitem value="Master VtArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtArtefacto.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtEmpresa">  
+								                    <p:menuitem value="Master VtEmpresa" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtEmpresa.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtEstado">  
+								                    <p:menuitem value="Master VtEstado" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtEstado.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtHistoriaArtefacto">  
+								                    <p:menuitem value="Master VtHistoriaArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtHistoriaArtefacto.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtInteres">  
+								                    <p:menuitem value="Master VtInteres" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtInteres.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtPilaProducto">  
+								                    <p:menuitem value="Master VtPilaProducto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtPilaProducto.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtPrioridad">  
+								                    <p:menuitem value="Master VtPrioridad" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtPrioridad.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtProyecto">  
+								                    <p:menuitem value="Master VtProyecto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtProyecto.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtProyectoUsuario">  
+								                    <p:menuitem value="Master VtProyectoUsuario" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtProyectoUsuario.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtRol">  
+								                    <p:menuitem value="Master VtRol" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtRol.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtSprint">  
+								                    <p:menuitem value="Master VtSprint" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtSprint.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtTipoArtefacto">  
+								                    <p:menuitem value="Master VtTipoArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtTipoArtefacto.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtUsuario">  
+								                    <p:menuitem value="Master VtUsuario" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtUsuario.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtUsuarioArtefacto">  
+								                    <p:menuitem value="Master VtUsuarioArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtUsuarioArtefacto.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtUsuarioRol">  
+								                    <p:menuitem value="Master VtUsuarioRol" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtUsuarioRol.xhtml" />  
+								               	 </p:submenu>
+											 							            </p:column>
+							        </p:submenu>  
+															
+															
+							  
+							        <p:submenu label="Data Table" icon="ui-icon-document">
+							           <p:column>  
+							                								            	 <p:submenu label="VtArchivo">  
+								                    <p:menuitem value="VtArchivo" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtArchivoListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtArtefacto">  
+								                    <p:menuitem value="VtArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtArtefactoListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtEmpresa">  
+								                    <p:menuitem value="VtEmpresa" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtEmpresaListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtEstado">  
+								                    <p:menuitem value="VtEstado" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtEstadoListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtHistoriaArtefacto">  
+								                    <p:menuitem value="VtHistoriaArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtHistoriaArtefactoListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtInteres">  
+								                    <p:menuitem value="VtInteres" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtInteresListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtPilaProducto">  
+								                    <p:menuitem value="VtPilaProducto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtPilaProductoListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtPrioridad">  
+								                    <p:menuitem value="VtPrioridad" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtPrioridadListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtProyecto">  
+								                    <p:menuitem value="VtProyecto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtProyectoListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtProyectoUsuario">  
+								                    <p:menuitem value="VtProyectoUsuario" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtProyectoUsuarioListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtRol">  
+								                    <p:menuitem value="VtRol" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtRolListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtSprint">  
+								                    <p:menuitem value="VtSprint" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtSprintListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtTipoArtefacto">  
+								                    <p:menuitem value="VtTipoArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtTipoArtefactoListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtUsuario">  
+								                    <p:menuitem value="VtUsuario" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtUsuarioListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtUsuarioArtefacto">  
+								                    <p:menuitem value="VtUsuarioArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtUsuarioArtefactoListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtUsuarioRol">  
+								                    <p:menuitem value="VtUsuarioRol" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtUsuarioRolListDataTable.xhtml" />  
+								               	 </p:submenu>
+											 							            </p:column>
+							        </p:submenu>  
+							  
+							        
+							  
+							  
+							        <p:submenu label="Edit Data Table" icon="ui-icon-contact">  
+							            <p:column>  
+							                								            	 <p:submenu label="VtArchivo">  
+								                    <p:menuitem value="VtArchivo" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtArchivoListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtArtefacto">  
+								                    <p:menuitem value="VtArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtArtefactoListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtEmpresa">  
+								                    <p:menuitem value="VtEmpresa" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtEmpresaListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtEstado">  
+								                    <p:menuitem value="VtEstado" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtEstadoListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtHistoriaArtefacto">  
+								                    <p:menuitem value="VtHistoriaArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtHistoriaArtefactoListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtInteres">  
+								                    <p:menuitem value="VtInteres" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtInteresListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtPilaProducto">  
+								                    <p:menuitem value="VtPilaProducto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtPilaProductoListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtPrioridad">  
+								                    <p:menuitem value="VtPrioridad" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtPrioridadListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtProyecto">  
+								                    <p:menuitem value="VtProyecto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtProyectoListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtProyectoUsuario">  
+								                    <p:menuitem value="VtProyectoUsuario" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtProyectoUsuarioListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtRol">  
+								                    <p:menuitem value="VtRol" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtRolListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtSprint">  
+								                    <p:menuitem value="VtSprint" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtSprintListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtTipoArtefacto">  
+								                    <p:menuitem value="VtTipoArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtTipoArtefactoListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtUsuario">  
+								                    <p:menuitem value="VtUsuario" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtUsuarioListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtUsuarioArtefacto">  
+								                    <p:menuitem value="VtUsuarioArtefacto" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtUsuarioArtefactoListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 								            	 <p:submenu label="VtUsuarioRol">  
+								                    <p:menuitem value="VtUsuarioRol" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/XHTML/vtUsuarioRolListDataTableEditable.xhtml" />  
+								               	 </p:submenu>
+											 							            </p:column>  
+							        </p:submenu>  
+						  
+						        	<p:menuitem value="Quit" url="#{facesContext.externalContext.request.scheme}://#{facesContext.externalContext.request.serverName}:#{facesContext.externalContext.request.serverPort}#{facesContext.externalContext.request.contextPath}/index.jsp" icon="ui-icon-close" />  
+						    
+						    </p:megaMenu>  
+						</h:form>
+					
+					<!-- end menu -->
+				</ui:composition>
+			</f:view>
+		</body>
+	</html>
+</jsp:root>

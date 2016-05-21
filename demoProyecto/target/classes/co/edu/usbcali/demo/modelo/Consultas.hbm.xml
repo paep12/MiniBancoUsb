@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/08/2015 05:32:22 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+
+
+	<query name="consultarUsuariosPorLogin">
+   
+  <![CDATA[
+  		Select usu From VtUsuario usu where  usu.login =:elLogin
+  
+  ]]>
+
+	</query>
+	
+
+</hibernate-mapping>
