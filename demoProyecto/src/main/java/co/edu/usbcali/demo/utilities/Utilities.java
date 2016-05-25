@@ -21,6 +21,11 @@ import org.apache.commons.validator.EmailValidator;
 public class Utilities {
 
 	private static final Logger log = LoggerFactory.getLogger(Utilities.class);
+	
+	public void metodoSiso(){
+		
+		System.out.println("No hacer sysos");
+	}
 
 	public static boolean isNumeric(String word) {
 		boolean ret = false;
